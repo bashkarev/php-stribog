@@ -36,7 +36,7 @@ void GOST34112012Init(void* ctx, const unsigned int digest_size)
 	}
 }
 
-#if defined(HAVE_CPUID_H) && (__x86_64__ || __i386__) && defined(__GNUC__) && __GNUC_PREREQ(4, 6)
+#if defined(HAVE_CPUID_H) && (__x86_64__ || __i386__) && defined(__GNUC__) && ((__GNUC__ << 16) + __GNUC_MINOR__ >= ((4) << 16) + (6))
 typedef void (*func_t)(void);
 
 #ifndef bit_MMX
